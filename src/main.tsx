@@ -1,20 +1,19 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
-
-import "@unocss/reset/tailwind-compat.css";
 
 import "virtual:uno.css";
+import "./index.css";
 
-import Footer from "./components/Footer.tsx";
-import Navbar from "./components/Navbar.tsx";
+import App from "./App";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <div className="bg-100">
-      <Navbar />
-      <App />
-      <Footer />
-    </div>
-  </StrictMode>,
+createRoot(document.getElementById("root") as HTMLElement).render(
+    <StrictMode>
+        <div className="bg-100">
+            <Navbar />
+            <App />
+            <Footer />
+        </div>
+    </StrictMode>,
 );
